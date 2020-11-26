@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<ul>
+    {% for book in book_list %}
+        <li>{{ book.title }} <i>written by {{ book.author|lower }}</i> </li>
+    {% empty %}
+        <li>sorry no books yet.</li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}
